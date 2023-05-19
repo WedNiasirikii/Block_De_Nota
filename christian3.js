@@ -20,3 +20,8 @@ function eliminarUltimaNota() {
         notasGuardadas.removeChild(ultimaNota);
     }
 }
+function color(z) {
+    var a = getComputedStyle(z);
+    var b = a.backgroundImage;
+    document.getElementsByTagName("BODY")[0].style.backgroundImage = b;
+}

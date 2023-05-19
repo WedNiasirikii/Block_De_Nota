@@ -8,9 +8,7 @@
 
 <body>
     <main>
-        <section class="title">
-            <p>Block de Notas</p>
-        </section>
+
         <section class="añadir">
             <input type="text" id="editor" onkeyup="manejarTecla(event)" placeholder="a&ntilde;adir...">
         </section>
@@ -21,9 +19,16 @@
             <script src="./christian3.js"></script>
         </section>
         <section class="borrar">
-            <button onclick="eliminarUltimaNota()"><img src="./eliminar.png"></button>
+            <button onclick="eliminarUltimaNota()" class="eliminar"><img src="./img/eliminar.png"></button>
         </section>
+
     </main>
+    <section class="backgraund">
+        <span id="1" onclick="color(this)" class="color clr1"></span>
+        <span id="2" onclick="color(this)" class="color clr2"></span>
+        <span onclick="color(this)" class="color clr3"></span>
+        <span onclick="color(this)" class="color clr4"></span>
+    </section>
 </body>
 
 </html>
