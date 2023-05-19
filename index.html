@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bloc de Notas</title>
+    <link rel="stylesheet" type="text/css" href="./Christian3.css">
+</head>
+
+<body>
+    <main>
+        <section class="title">
+            <p>Block de Notas</p>
+        </section>
+        <section class="añadir">
+            <input type="text" id="editor" onkeyup="manejarTecla(event)" placeholder="a&ntilde;adir...">
+        </section>
+        <section class="añadidos">
+
+            <div id="notasGuardadas"></div>
+            <hr>
+            <script src="./christian3.js"></script>
+        </section>
+        <section class="borrar">
+            <button onclick="eliminarUltimaNota()"><img src="./eliminar.png"></button>
+        </section>
+    </main>
+</body>
+
+</html>
