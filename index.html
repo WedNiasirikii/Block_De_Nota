@@ -2,8 +2,8 @@
 <html>
 
 <head>
-    <title>Bloc de Notas</title>
-    <link rel="stylesheet" type="text/css" href="./christian3.css">
+    <title>lista</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -15,35 +15,45 @@
 </head>
 
 <body>
+    <script src="./index.js"></script>
+    <!--las clase lista es la caja que contiene todo, input para añadir, items, botones-->
+
+    <!--clase añadir hace referencia al input donde se pone los item que se guardaran-->
+
+    <!--el id notasGuardadas es donde se guardan los item que se añaden-->
+
+    <!--clase reset, sitio donde esta el boton de reset..-->
     <main>
-        <section class="limite">
-            <p class="advertencia"></p>
-        </section>
-        <section class="input-field">
-            <input type="text" id="editor" onkeyup="manejarTecla(event)">
-            <label>a&ntilde;adir...</label>
-        </section>
-        <section class="añadidos">
+        <section class="lista">
 
-            <div id="notasGuardadas"></div>
+            <div class="añadir">
+                <input type="text" id="editor" onkeyup="manejarTecla(event)" placeholder="a&ntilde;adir...">
+
+            </div>
+            <div class="cajaNotas column-container">
+                <div id="notasGuardadas"></div>
+
+            </div>
+
             <hr>
-            <script src="./christian3.js"></script>
-        </section>
-        <section class="borrar">
-            <button onclick="reiniciarLista()" class="material-symbols-outlined button-icon">
-                refresh
-            </button>
-
+            <div class="Reset">
+                <button onclick="reiniciarLista()" class="material-symbols-outlined button-icon" id="borrarTodo">
+                    refresh
+                </button>
+            </div>
         </section>
 
     </main>
-    <section class="backgraund">
+    <div class="background">
         <span onclick="color(this)" class="color clr1"></span>
         <span onclick="color(this)" class="color clr2"></span>
         <span onclick="color(this)" class="color clr3"></span>
         <span onclick="color(this)" class="color clr4"></span>
         <span onclick="color(this)" class="color clr5"></span>
-    </section>
+        <span onclick="color(this)" class="color clr6"></span>
+        <span onclick="color(this)" class="color clr7"></span>
+    </div>
+
 </body>
 
 </html>
