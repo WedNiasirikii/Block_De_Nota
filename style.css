@@ -7,24 +7,77 @@
 body {
     padding: 0;
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+
     align-items: center;
     background-image: url(./img/minimal-4k-fox-illustration-wallpaper-preview.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+header {
+    display: flex;
+    width: 500px;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.WedNiasirikii {
+    background: #fafafa10;
+    backdrop-filter: blur(0.4rem);
+    width: 45px;
+    height: 45px;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 6px;
+    transition: 0.5s;
+    position: relative;
+    overflow: hidden;
+}
+
+.WedNiasirikii:hover {
+
+    width: 240px;
+    background: white;
+}
+
+.contenedor-imagen {
+
+    display: flex;
+    align-items: center;
+}
+
+.wed {
+    width: 45px;
+    height: 45px;
+    border-radius: 6px;
+}
+
+.texto-adicional {
+    margin: 0;
+    display: none;
+    padding-left: 40px;
+    font-size: 20px;
+}
+
+.WedNiasirikii:hover .texto-adicional {
+    display: block;
+}
+
+
 main {
+    margin: 0;
+    padding: 0;
     height: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 section.lista {
     width: 300px;
-    margin: 100px 100px 20px 100px;
+    margin: 0px 100px 20px 100px;
     background: #fafafa10;
     backdrop-filter: blur(0.4rem);
     padding: 15px;
@@ -176,4 +229,8 @@ input:focus::placeholder {
 
 .clr7 {
     background-image: url(./img/bosque-durante-navidad-arte-digital_3840x2160_xtrafondos.com.jpg);
+}
+
+.clr8 {
+    background-image: url(./img/89510-el-increible-mundo-de-gumball.jpg);
 }
