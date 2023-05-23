@@ -7,14 +7,12 @@ function manejarTecla(event) {
 var limiteElementos = 5;
 
 function guardarNota() {
+
     var nota = document.getElementById("editor").value;
     var notasGuardadas = document.getElementById("notasGuardadas");
     var limiteElementos = 5
     // Verificar el lÃ­mite de elementos
     if (notasGuardadas.children.length >= limiteElementos) {
-        var mensajeLimite = document.createElement("div");
-        mensajeLimite.textContent = "Â¡LÃ­mite alcanzado 9/9!";
-        notasGuardadas.appendChild(mensajeLimite);
 
         // Desactivar el campo de entrada
         document.getElementById("editor").disabled = true;
@@ -54,14 +52,25 @@ function guardarNota() {
         document.getElementById("editor").disabled = true;
     }
 
+
 }
 function eliminarUltimaNota() {
     var notasGuardadas = document.getElementById("notasGuardadas");
     var ultimaNota = notasGuardadas.lastElementChild;
     if (ultimaNota) {
-        notasGuardadas.removeChild(ultimaNota);
+        var contenedorNota = ultimaNota; // Definir contenedorNota como la última nota antes de eliminarla
+        contenedorNota.classList.add("fade-out"); // Agregar la clase de animación
+
+        setTimeout(function () {
+            notasGuardadas.removeChild(contenedorNota); // Eliminar el contenedor después de la duración de la animación
+            // Restablecer el campo de entrada si el límite no se ha alcanzado
+            if (notasGuardadas.children.length < limiteElementos) {
+                document.getElementById("editor").disabled = false;
+            }
+        }, 500); // Duración de la animación en milisegundos (0.5 segundos en este ejemplo)
     }
 }
+
 function color(z) {
     var a = getComputedStyle(z);
     var b = a.backgroundImage;

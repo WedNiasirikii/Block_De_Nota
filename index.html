@@ -1,46 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>lista</title>
-    <link rel="stylesheet" type="text/css" href="./style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@500&family=Fira+Sans&family=Kanit&family=PT+Sans+Caption:wght@700&family=Roboto:wght@500&family=Secular+One&display=swap"
-        rel="stylesheet">
-    <link rel="shortcut icon" href="./img/nota-adhesiva.png" type="image/x-icon">
+    <title>Christian</title>
+    <!--estilos-->
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/index2.css">
+    <!--Iconos-->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
 </head>
 
 <body>
-    <script src="./index.js"></script>
-    <!--las clase lista es la caja que contiene todo, input para añadir, items, botones-->
-
-    <!--clase añadir hace referencia al input donde se pone los item que se guardaran-->
-
-    <!--el id notasGuardadas es donde se guardan los item que se añaden-->
-
-    <!--clase reset, sitio donde esta el boton de reset..-->
-    <header>
-        <div class="WedNiasirikii">
-            <div class="contenedor-imagen">
-                <img src="./img/WedNiasirikii.jpg" alt="" class="wed">
-                <p class="texto-adicional">WedNiasirikii</p>
-            </div>
-        </div>
-        <div class="WedNiasirikii">
-            <div class="contenedor-imagen">
-                <img src="./img/waflittoo.jpg" alt="" class="wed">
-                <p class="texto-adicional">waflittoo</p>
-            </div>
-        </div>
-
-    </header>
-    <main>
-        <section class="lista">
-
+    <section class="section1">
+        <div class="lista">
             <div class="añadir">
                 <input type="text" id="editor" onkeyup="manejarTecla(event)" placeholder="a&ntilde;adir...">
 
@@ -56,19 +31,41 @@
                     refresh
                 </button>
             </div>
-        </section>
-        <div class="background">
-            <span onclick="color(this)" class="color clr1"></span>
-            <span onclick="color(this)" class="color clr2"></span>
-            <span onclick="color(this)" class="color clr3"></span>
-            <span onclick="color(this)" class="color clr4"></span>
-            <span onclick="color(this)" class="color clr5"></span>
-            <span onclick="color(this)" class="color clr6"></span>
-            <span onclick="color(this)" class="color clr7"></span>
-            <span onclick="color(this)" class="color clr8"></span>
         </div>
-    </main>
+    </section>
+    <section class="section2">
+        <div class="calculator">
+            <input type="text" id="display" disabled>
+            <br>
+            <button onclick="clearLastDigit()" class="operador">CE</button>
+            <button onclick="clearDisplay()" class="operador">C</button>
+            <button onclick="appendOperator('%')" class="operador">%</button>
+            <button onclick="appendOperator('.')" class="operador">.</button>
+            <br>
+            <button onclick="appendNumber('1')" class="digito">1</button>
+            <button onclick="appendNumber('2')" class="digito">2</button>
+            <button onclick="appendNumber('3')" class="digito">3</button>
+            <button onclick="appendOperator('+')" class="operador">+</button>
+            <br>
+            <button onclick=" appendNumber('4')" class="digito">4</button>
+            <button onclick="appendNumber('5')" class="digito">5</button>
+            <button onclick="appendNumber('6')" class="digito">6</button>
+            <button onclick="appendOperator('-')" class="operador">-</button>
+            <br>
+            <button onclick="appendNumber('7')" class="digito">7</button>
+            <button onclick="appendNumber('8')" class="digito">8</button>
+            <button onclick="appendNumber('9')" class="digito">9</button>
+            <button onclick="appendOperator('*')" class="operador">*</button>
+            <br>
+            <button onclick="appendNumber('0')" class="digito">0</button>
+            <button onclick="calculate()" id="igual" class="digito">=</button>
+            <button onclick="appendOperator('/')" class="operador">/</button>
 
+        </div>
+    </section>
+    <script src="./JavaScript/index.js">
+    </script>
+    <script src="./JavaScript/index2.js"></script>
 </body>
 
 </html>
