@@ -10,6 +10,7 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="shortcut icon" href="./img/WedNiasirikii.jpg" type="image/x-icon">
 
 </head>
 
@@ -36,31 +37,53 @@
     <section class="section2">
         <div class="calculator">
             <input type="text" id="display" disabled>
-            <br>
-            <button onclick="clearLastDigit()" class="operador">CE</button>
-            <button onclick="clearDisplay()" class="operador">C</button>
-            <button onclick="appendOperator('%')" class="operador">%</button>
-            <button onclick="appendOperator('.')" class="operador">.</button>
-            <br>
-            <button onclick="appendNumber('1')" class="digito">1</button>
-            <button onclick="appendNumber('2')" class="digito">2</button>
-            <button onclick="appendNumber('3')" class="digito">3</button>
-            <button onclick="appendOperator('+')" class="operador">+</button>
-            <br>
-            <button onclick=" appendNumber('4')" class="digito">4</button>
-            <button onclick="appendNumber('5')" class="digito">5</button>
-            <button onclick="appendNumber('6')" class="digito">6</button>
-            <button onclick="appendOperator('-')" class="operador">-</button>
-            <br>
-            <button onclick="appendNumber('7')" class="digito">7</button>
-            <button onclick="appendNumber('8')" class="digito">8</button>
-            <button onclick="appendNumber('9')" class="digito">9</button>
-            <button onclick="appendOperator('*')" class="operador">*</button>
-            <br>
-            <button onclick="appendNumber('0')" class="digito">0</button>
-            <button onclick="calculate()" id="igual" class="digito">=</button>
-            <button onclick="appendOperator('/')" class="operador">/</button>
-
+            <div class="contenedorBotones">
+                <button onclick="clearLastDigit()" class="operador">CE</button>
+                <button onclick="clearDisplay()" class="operador">C</button>
+                <button onclick="appendOperator('%')" class="operador">%</button>
+                <button onclick="appendOperator('.')" class="operador">.</button>
+            </div>
+            <div class="contenedorBotones">
+                <button onclick="appendNumber('1')" class="digito">1</button>
+                <button onclick="appendNumber('2')" class="digito">2</button>
+                <button onclick="appendNumber('3')" class="digito">3</button>
+                <button onclick="appendOperator('+')" class="operador">+</button>
+            </div>
+            <div class="contenedorBotones">
+                <button onclick=" appendNumber('4')" class="digito">4</button>
+                <button onclick="appendNumber('5')" class="digito">5</button>
+                <button onclick="appendNumber('6')" class="digito">6</button>
+                <button onclick="appendOperator('-')" class="operador">-</button>
+            </div>
+            <div class="contenedorBotones">
+                <button onclick="appendNumber('7')" class="digito">7</button>
+                <button onclick="appendNumber('8')" class="digito">8</button>
+                <button onclick="appendNumber('9')" class="digito">9</button>
+                <button onclick="appendOperator('*')" class="operador">X</button>
+            </div>
+            <div class="contenedorBotones">
+                <button onclick="appendNumber('0')" class="digito">0</button>
+                <button onclick="calculate()" id="igual" class="digito">=</button>
+                <button onclick="appendOperator('/')" class="operador">/</button>
+            </div>
+        </div>
+        <div class="Colores">
+            <div class="SelectorColor">
+                <p class="InfoColor">Fondo</p>
+                <input type="color" name="Background" class="InputColor" id="Fondo" data-target=".section2">
+            </div>
+            <div class="SelectorColor">
+                <p class="InfoColor">Calculadora</p>
+                <input type="color" name="calculadora" class="InputColor" id="Calculadora" data-target=".calculator">
+            </div>
+            <div class="SelectorColor">
+                <p class="InfoColor">Operador</p>
+                <input type="color" name="operadores" class="InputColor" id="Operador" data-target=".operador">
+            </div>
+            <div class="SelectorColor">
+                <p class="InfoColor">Numeros</p>
+                <input type="color" name="Numero" class="InputColor" id="Numero" data-target=".digito">
+            </div>
         </div>
     </section>
     <script src="./JavaScript/index.js">
