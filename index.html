@@ -16,6 +16,7 @@
 
 <body>
     <section class="section1">
+        <p class="TituloProyecto">Lista de Cosas</p>
         <div class="lista">
             <div class="añadir">
                 <input type="text" id="editor" onkeyup="manejarTecla(event)" placeholder="a&ntilde;adir...">
@@ -35,6 +36,7 @@
         </div>
     </section>
     <section class="section2">
+        <p class="TituloProyecto">Calculadora</p>
         <div class="calculator">
             <input type="text" id="display" disabled>
             <div class="contenedorBotones">
@@ -68,9 +70,18 @@
             </div>
         </div>
     </section>
-    <script src="./JavaScript/index.js">
-    </script>
+    <section class="section3">
+        <p class="TituloProyecto">Reloj</p>
+        <div class="cajaReloj">
+            <div id="fecha"></div>
+            <div id="reloj">
+            </div>
+        </div>
+        <button onclick="volverArriba()" id="btnVolverArriba"
+            class="material-icons button-icon">keyboard_arrow_up</button>
+    </section>
     <script src="./JavaScript/index2.js"></script>
+    <script src="./JavaScript/index.js">  </script>
 </body>
 
 </html>
