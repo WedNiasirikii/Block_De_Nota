@@ -20,15 +20,3 @@ function clearLastDigit() {
     const display = document.getElementById('display');
     display.value = display.value.slice(0, -1);
 }
-var inputColors = document.querySelectorAll(".InputColor");
-
-inputColors.forEach(function (input) {
-    input.addEventListener("input", function () {
-        var color = input.value;
-        var targetSelector = input.dataset.target;
-        var targetElements = document.querySelectorAll(targetSelector);
-        targetElements.forEach(function (element) {
-            element.style.backgroundColor = color;
-        });
-    });
-});
