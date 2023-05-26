@@ -1,0 +1,90 @@
+.section1 {
+    width: 100%;
+    height: 100vh;
+    background-color: cornflowerblue;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section1 .lista {
+    background-color: #fafafa10;
+    backdrop-filter: blur(1rem);
+    padding: 15px;
+    width: 300px;
+    box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.5);
+}
+
+.contenedor-nota {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    padding: 7px;
+    font-size: 25px;
+    color: white;
+    transition: 0.3s;
+}
+
+.contenedor-nota:hover {
+    margin-left: 30px;
+    background-color: darkslategray;
+}
+
+.btn-eliminar {
+    margin-left: auto;
+    background-color: darkslategray;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+
+.Reset {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#borrarTodo {
+    background-color: darkslategray;
+    padding: 6px 30px;
+    border: none;
+    font-size: 20px;
+    color: white;
+    transition: 0.3s;
+}
+
+#borrarTodo:hover {
+    padding: 6px 60px;
+}
+
+
+
+#editor {
+    padding: 10px;
+    color: white;
+    font-size: 25px;
+    width: auto;
+    background: #fafafa10;
+    backdrop-filter: blur(0.4rem);
+    border: none;
+    margin: 0 auto;
+
+}
+
+.añadir {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+input:focus {
+    outline: none;
+}

@@ -83,3 +83,37 @@ function reiniciarLista() {
     // Habilitar el campo de entrada
     document.getElementById("editor").disabled = false;
 }
+
+// Crea los cuadrados flotantes
+function createFloatingSquares() {
+    const numSquares = 50; // Número de cuadrados a crear
+
+    for (let i = 0; i < numSquares; i++) {
+        const square = document.createElement('div');
+        square.className = 'square';
+        document.getElementById('background-animation').appendChild(square);
+    }
+}
+
+// Crea los cuadrados flotantes
+function createFloatingSquares() {
+    const numSquares = 50; // Número de cuadrados a crear
+
+    for (let i = 0; i < numSquares; i++) {
+        const square = document.createElement('div');
+        square.className = 'square';
+        document.getElementById('background-animation').appendChild(square);
+    }
+}
+
+// Crea los cuadrados flotantes
+function createFloatingSquares() {
+    const numSquares = 50; // Número de cuadrados a crear
+
+    for (let i = 0; i < numSquares; i++) {
+        const square = document.createElement('div');
+        square.className = 'square';
+        document.getElementById('background-animation').appendChild(square);
+    }
+}
+
