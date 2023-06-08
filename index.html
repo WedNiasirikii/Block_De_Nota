@@ -118,7 +118,13 @@
         <div class="contenedorPassword">
             <label class="longitud" for="longitud">Longitud de la contrase&ntildea</label>
             <input type="number" id="longitud" min="1" step="1" class="numberPassword">
-            <button onclick="generarContrasena()" id="GeneradorPassword">Generar Contrase&ntildea</button>
+            <div class="botonesGenerarCopy">
+                <button onclick="generarContrasena()" id="GeneradorPassword">Generar</button>
+                <button onclick="copyText()" id="CopiarTexto">
+                    <span class="material-symbols-outlined">file_copy</span>
+                </button>
+
+            </div>
             <p id="contrasena-generada" class="ResultadoPassword"></p>
         </div>
     </section>
@@ -127,6 +133,7 @@
     <script src="./JavaScript/Lista.js"></script>
     <script src="./JavaScript/calculadora.js"></script>
     <script src="./JavaScript/Reloj.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

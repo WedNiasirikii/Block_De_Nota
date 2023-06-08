@@ -58,22 +58,39 @@ body {
 
 #ImgWedIcon {
     margin-right: 80px;
-    position: relative;
-    animation: mover-arriba-abajo 1s ease-in-out infinite;
+    position: absolute;
+    animation: aparecer 1s ease-in-out forwards, mover-izq-der 2s ease-in-out 1s infinite;
 }
 
-@keyframes mover-arriba-abajo {
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+        /* Comienza invisible */
+        transform: translateX(100%);
+        /* Fuera de la pantalla a la derecha */
+    }
+
+    100% {
+        opacity: 1;
+        /* Termina completamente visible */
+        transform: translateX(0);
+        /* Llega a la posición inicial */
+    }
+}
+
+@keyframes mover-izq-der {
 
     0%,
     100% {
-        transform: translateY(0);
+        transform: translateY(-50px);
+        /* Regresa a la posición inicial */
     }
-
-
 
     50% {
-        transform: translateY(-40px);
+        transform: translateY(50px);
+        /* Desplazamiento hacia la derecha */
     }
+
 }
 
 #btnVolverArriba {
@@ -107,4 +124,18 @@ body {
     font-size: 40px;
     color: white;
     margin: 30px 0px 60px;
+}
+
+body::-webkit-scrollbar {
+    background-color: rgba(241, 241, 241, 0);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(131, 129, 129);
+    border-radius: 7px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    width: 15px;
+    background-color: rgb(119, 115, 115);
 }
