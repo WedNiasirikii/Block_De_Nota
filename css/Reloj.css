@@ -56,8 +56,22 @@
     background-color: rgb(41, 40, 40);
     color: white;
     font-size: 20px;
-    padding: 5px;
+    padding: 10px 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: 3s;
+}
+
+.select-container .OptionPais {
+    /* Agrega tus estilos personalizados aquí */
+    color: white;
+    font-size: 16px;
+    margin: 10px;
+}
+
+/* Estilo para la opción seleccionada */
+.select-container:checked {
+    background-color: #0c0c0c;
+    font-weight: bold;
 }

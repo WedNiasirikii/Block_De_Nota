@@ -6,6 +6,23 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
+}
+
+.SelectorMode {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.SelectorModeOpcions {
+    background-color: #658963;
+    font-size: 20px;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 7px;
 }
 
 .calculator {
@@ -78,4 +95,13 @@
 
 #igual {
     width: 128px;
+}
+
+.section2,
+.calculator,
+#display,
+.operador,
+.digito,
+.SelectorModeOpcions {
+    transition: background-color 0.5s ease;
 }
