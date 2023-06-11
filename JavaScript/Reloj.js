@@ -8,7 +8,7 @@ window.onload = function () {
             "Miércoles",
             "Jueves",
             "Viernes",
-            "Sábado"
+            "Sabado"
         ];
         return dias[diaSemana];
     }
@@ -34,29 +34,24 @@ window.onload = function () {
 
     // Función para actualizar el reloj
     function actualizarReloj() {
-        var fechaActual = new Date();
-        var hora = fechaActual.getHours();
-        var minutos = fechaActual.getMinutes();
-        var segundos = fechaActual.getSeconds();
-        var diaSemana = fechaActual.getDay();
-        var dia = fechaActual.getDate();
-        var mes = fechaActual.getMonth();
-        var anio = fechaActual.getFullYear();
-
-        // Convertir la hora al formato de 12 horas y agregar AM o PM
-        var periodo = hora >= 12 ? "PM" : "AM";
-        hora = hora % 12 || 12;
-
-        // Agregar un cero delante si los minutos o segundos son menores a 10
-        minutos = minutos < 10 ? "0" + minutos : minutos;
-        segundos = segundos < 10 ? "0" + segundos : segundos;
+        var zonaHoraria = document.getElementById("timezone-select").value;
+        var fechaActual = moment().tz(zonaHoraria);
+        var hora = fechaActual.format("hh:mm:ss A");
 
         var reloj = document.getElementById("reloj");
-        reloj.innerHTML = hora + ":" + minutos + ":" + segundos + " " + periodo;
+        reloj.innerHTML = hora;
 
-        var fecha = document.getElementById("fecha");
+        var minutos = fechaActual.minutes();
+        var segundos = fechaActual.seconds();
+        var diaSemana = fechaActual.day();
+        var dia = fechaActual.date();
+        var mes = fechaActual.month();
+        var anio = fechaActual.year();
+
         var nombreDia = obtenerNombreDia(diaSemana);
         var nombreMes = obtenerNombreMes(mes);
+
+        var fecha = document.getElementById("fecha");
         fecha.innerHTML =
             nombreDia +
             ", " +
@@ -69,4 +64,8 @@ window.onload = function () {
 
     // Actualizar el reloj cada segundo
     setInterval(actualizarReloj, 1000);
+
+    document.getElementById("timezone-select").addEventListener("change", function () {
+        actualizarReloj();
+    });
 };

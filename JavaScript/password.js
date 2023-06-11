@@ -8,7 +8,7 @@ function generarContrasena() {
             text: 'Ingresa un número entre 1 y 16.',
         });
     } else {
-        var caracteres = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+~`|}{[]\\:;?><,./-=ñÑ';
+        var caracteres = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#$%&*@^ñÑ-_';
         var contrasena = '';
 
         for (var i = 0; i < longitud; i++) {

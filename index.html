@@ -105,13 +105,24 @@
         </div>
     </section>
     <section class="section3" id="section3">
+        <select id="timezone-select" class="select-container">
+            <option class="OptionPais" value="America/Argentina/Buenos_Aires">Argentina</option>
+            <option class="OptionPais" value="America/Bogota">Colombia</option>
+            <option class="OptionPais" value="America/Guayaquil">Ecuador</option>
+            <option class="OptionPais" value="America/Mexico_City">Mexico</option>
+            <option class="OptionPais" value="Europe/Madrid">Espa&ntildea</option>
+            <option class="OptionPais" value="America/El_Salvador">El Salvador</option>
+            <option class="OptioPaisn" value="America/Santiago">Chile</option>
+            <option class="OptionPais" value="Europe/Paris">Francia</option>
+
+
+        </select>
         <p class="TituloProyecto">Reloj</p>
         <div class="cajaReloj">
             <div id="fecha"></div>
             <div id="reloj"></div>
         </div>
-        <button onclick="volverArriba()" id="btnVolverArriba"
-            class="material-icons button-icon">keyboard_arrow_up</button>
+
     </section>
     <section class="section4" id="section4">
         <p class="TituloProyecto">Generador de Contrase&ntildeas</p>
@@ -127,6 +138,8 @@
             </div>
             <p id="contrasena-generada" class="ResultadoPassword"></p>
         </div>
+        <button onclick="volverArriba()" id="btnVolverArriba"
+            class="material-icons button-icon">keyboard_arrow_up</button>
     </section>
     <script src="./JavaScript/password.js"></script>
     <script src="./JavaScript/index2.js"></script>
@@ -134,6 +147,10 @@
     <script src="./JavaScript/calculadora.js"></script>
     <script src="./JavaScript/Reloj.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.33/moment-timezone-with-data.min.js"></script>
+
 </body>
 
 </html>
