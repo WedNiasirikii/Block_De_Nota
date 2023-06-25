@@ -84,36 +84,26 @@ function reiniciarLista() {
     document.getElementById("editor").disabled = false;
 }
 
-// Crea los cuadrados flotantes
-function createFloatingSquares() {
-    const numSquares = 50; // Número de cuadrados a crear
 
-    for (let i = 0; i < numSquares; i++) {
-        const square = document.createElement('div');
-        square.className = 'square';
-        document.getElementById('background-animation').appendChild(square);
+
+
+var notasGuardadas = []; // Lista para almacenar las notas guardadas
+
+function agregarNota(nota) {
+    notasGuardadas.push(nota); // Agregar nota a la lista
+
+    // Verificar si la lista tiene 5 elementos
+    if (notasGuardadas.length % 5 === 0) {
+        // Crear una nueva columna al lado de las notas existentes
+        var columnaNueva = document.createElement('div');
+        columnaNueva.className = 'column-container';
+        columnaNueva.innerHTML = '<div id="notasGuardadas' + notasGuardadas.length + '"></div>';
+
+        var cajaNotas = document.querySelector('.cajaNotas');
+        cajaNotas.appendChild(columnaNueva);
     }
+
+    // Actualizar el contenido de la última columna de notas
+    var ultimaColumna = document.querySelector('.column-container:last-child');
+    ultimaColumna.innerHTML = '<div id="notasGuardadas' + notasGuardadas.length + '"></div>';
 }
-
-// Crea los cuadrados flotantes
-function createFloatingSquares() {
-    const numSquares = 50; // Número de cuadrados a crear
-
-    for (let i = 0; i < numSquares; i++) {
-        const square = document.createElement('div');
-        square.className = 'square';
-        document.getElementById('background-animation').appendChild(square);
-    }
-}
-
-// Crea los cuadrados flotantes
-function createFloatingSquares() {
-    const numSquares = 50; // Número de cuadrados a crear
-
-    for (let i = 0; i < numSquares; i++) {
-        const square = document.createElement('div');
-        square.className = 'square';
-        document.getElementById('background-animation').appendChild(square);
-    }
-}
-
